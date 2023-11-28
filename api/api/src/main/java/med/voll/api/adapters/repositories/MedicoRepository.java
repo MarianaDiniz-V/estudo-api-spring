@@ -1,4 +1,4 @@
-package med.voll.api.repositories;
+package med.voll.api.adapters.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

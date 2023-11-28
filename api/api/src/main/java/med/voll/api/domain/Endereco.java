@@ -1,11 +1,30 @@
 package med.voll.api.domain;
 
-public record DadosEnderecoMedico(
-        String logradouro,
-        String bairro,
-        String cidade,
-        String uf,
-        String numero,
-        String complemento
-) {
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.Embedded;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Embeddable
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Endereco {
+    private String cep;
+    private String logradouro;
+    private String bairro;
+    private String cidade;
+    private String uf;
+    private String numero;
+    private String complemento;
+    public Endereco(String cep) {
+        this.cep = cep;
+        this.logradouro = "fake";
+        this.bairro = "fake";
+        this.cidade = "fake";
+        this.uf = "fake";
+        this.numero = "fake";
+        this.complemento = "fake";
+    }
 }

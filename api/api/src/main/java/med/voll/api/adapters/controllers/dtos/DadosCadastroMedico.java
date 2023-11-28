@@ -1,4 +1,4 @@
-package med.voll.api.DTO;
+package med.voll.api.adapters.controllers.dtos;
 
 
 import med.voll.api.domain.Especialidade;
