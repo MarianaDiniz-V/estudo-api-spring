@@ -1,9 +1,9 @@
-package med.voll.api.adapters.controllers;
+package med.voll.api.adapters.controllers.medico;
 
 import jakarta.validation.Valid;
-import med.voll.api.adapters.controllers.dtos.DadosCadastroMedico;
-import med.voll.api.adapters.repositories.MedicoEntity;
-import med.voll.api.adapters.repositories.MedicoRepository;
+import med.voll.api.adapters.controllers.medico.dtos.DadosCadastroMedico;
+import med.voll.api.adapters.repositories.medico.MedicoEntity;
+import med.voll.api.adapters.repositories.medico.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

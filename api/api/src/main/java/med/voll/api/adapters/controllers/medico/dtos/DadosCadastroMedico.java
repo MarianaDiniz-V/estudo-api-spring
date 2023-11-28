@@ -1,4 +1,4 @@
-package med.voll.api.adapters.controllers.dtos;
+package med.voll.api.adapters.controllers.medico.dtos;
 
 
 import jakarta.validation.constraints.Email;
@@ -23,5 +23,4 @@ public record DadosCadastroMedico(
         @NotBlank
         @Pattern(regexp = "\\d{8}")
         String cep
-) {
-}
+) {}
