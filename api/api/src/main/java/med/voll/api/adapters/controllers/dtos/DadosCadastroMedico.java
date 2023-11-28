@@ -1,6 +1,7 @@
 package med.voll.api.DTO;
 
-import med.voll.api.Especialidade;
+
+import med.voll.api.domain.Especialidade;
 
 public record DadosCadastroMedico(
         String nome,

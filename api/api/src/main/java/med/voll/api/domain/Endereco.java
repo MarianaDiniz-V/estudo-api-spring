@@ -1,4 +1,4 @@
-package med.voll.api;
+package med.voll.api.domain;
 
 public record DadosEnderecoMedico(
         String logradouro,
