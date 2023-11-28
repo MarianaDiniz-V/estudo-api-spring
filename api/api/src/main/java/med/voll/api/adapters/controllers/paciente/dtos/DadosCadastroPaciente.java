@@ -1,4 +1,4 @@
-package med.voll.api.adapters.controllers.dtos;
+package med.voll.api.adapters.controllers.medico.dtos;
 
 
 import jakarta.validation.constraints.Email;
@@ -13,6 +13,8 @@ public record DadosCadastroMedico(
         @NotBlank
         @Email
         String email,
+        @NotBlank
+        String telefone,
         @NotBlank
         @Pattern(regexp = "\\d{4,6}")
         String crm,
