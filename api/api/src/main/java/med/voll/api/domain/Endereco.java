@@ -1,11 +1,9 @@
 package med.voll.api.domain;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.adapters.controllers.medico.dtos.DadosAtualizacaoMedico;
 
 @Embeddable
 @Getter

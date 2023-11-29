@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.adapters.controllers.medico.dtos.DadosAtualizacaoMedico;
+import med.voll.api.adapters.controllers.medico.dtos.DadosAtualizacaoMedicoRequest;
 import med.voll.api.adapters.controllers.medico.dtos.DadosCadastroMedico;
 import med.voll.api.domain.Especialidade;
 import med.voll.api.domain.Endereco;
@@ -39,7 +39,7 @@ public class MedicoEntity{
                 this.ativo = true;
         }
 
-        public void atualizarDados(DadosAtualizacaoMedico dados) {
+        public void atualizarDados(DadosAtualizacaoMedicoRequest dados) {
                 if(dados.email() != null){
                         this.email = dados.email();
                 }
