@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.adapters.controllers.medico.dtos.DadosAtualizacaoMedico;
 import med.voll.api.adapters.controllers.medico.dtos.DadosCadastroMedico;
 import med.voll.api.domain.Especialidade;
 import med.voll.api.domain.Endereco;
@@ -26,6 +27,7 @@ public class MedicoEntity{
         private Especialidade especialidade;
         @Embedded
         private Endereco endereco;
+        private Boolean ativo;
 
         public MedicoEntity(DadosCadastroMedico dados) {
                 this.nome = dados.nome();
@@ -34,5 +36,22 @@ public class MedicoEntity{
                 this.crm = dados.crm();
                 this.especialidade = dados.especialidade();
                 this.endereco = new Endereco(dados.cep());
+                this.ativo = true;
+        }
+
+        public void atualizarDados(DadosAtualizacaoMedico dados) {
+                if(dados.email() != null){
+                        this.email = dados.email();
+                }
+                if(dados.telefone() != null){
+                        this.telefone = dados.telefone();
+                }
+                if(dados.cep() != null){
+                        this.endereco.atualizarDados(dados.cep());
+                }
+        }
+
+        public void desativar() {
+                this.ativo = false;
         }
 }

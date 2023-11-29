@@ -5,6 +5,7 @@ import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.adapters.controllers.medico.dtos.DadosAtualizacaoMedico;
 
 @Embeddable
 @Getter
@@ -26,5 +27,11 @@ public class Endereco {
         this.uf = "fake";
         this.numero = "fake";
         this.complemento = "fake";
+    }
+
+    public void atualizarDados(String cep) {
+        if(cep != null){
+            this.cep = cep;
+        }
     }
 }
